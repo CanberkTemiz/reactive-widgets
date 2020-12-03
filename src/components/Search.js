@@ -55,7 +55,6 @@ const Search = () => {
 
   const handleChange = (event) => {
     setTerm(event.target.value);
-    console.log("Search component updated - setTerm state updated");
   };
 
   return (
