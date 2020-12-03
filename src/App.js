@@ -5,16 +5,16 @@ import Dropdown from "./components/Dropdown";
 
 const items = [
   {
-    title: "What is React?1",
-    content: "React is front end javascript library1",
+    title: "Accordion List Header",
+    content: "Im a list item belongs to accordion",
   },
   {
-    title: "What is React?2",
-    content: "React is front end javascript library2",
+    title: "Accordion List Header",
+    content: "Im a list item belongs to accordion",
   },
   {
-    title: "What is React?3",
-    content: "React is front end javascript library2",
+    title: "Accordion List Header",
+    content: "Im a list item belongs to accordion",
   },
 ];
 
@@ -26,14 +26,18 @@ const options = [
 
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <div>
-      <Accordion items={items} />
-      <hr />
-      <Search />
-      <hr />
+    <div className="ui segment column grid">
+      <div className="row">
+        <Accordion items={items} />
+      </div>
+
+      <div className="row">
+        <Search />
+      </div>
+
       <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
       </button>

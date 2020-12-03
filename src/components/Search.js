@@ -63,7 +63,12 @@ const Search = () => {
       <div className="ui form">
         <div className="field">
           <label>Enter Search Term</label>
-          <input className="input" value={term} onChange={handleChange} />
+          <input
+            className="input"
+            value={term}
+            onChange={handleChange}
+            placeholder="Search from Wikipedia"
+          />
         </div>
       </div>
       <div className="ui celled list">{renderedResults}</div>
